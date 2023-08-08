@@ -106,6 +106,8 @@ function stand() {
         message = "Winner!";
     } else if(yourSum < dealerSum) {
         message = "Loser!";
+    } else if(yourSum == 21 && yourSum > dealerSum) {
+        message = "Winner! Blackjack!";
     }
 
     document.getElementById("dealer-sum").innerText = dealerSum;
