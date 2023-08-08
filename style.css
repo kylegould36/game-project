@@ -40,6 +40,14 @@ button {
     position: absolute;
 }
 
+.rside {
+    float: right;
+    width: 15%;
+    position: absolute;
+    margin-left: 1315px;
+}
+
 .side-photos {
     width: 200%;
+    padding-bottom: 5px;
 }
