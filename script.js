@@ -1,31 +1,31 @@
+//Declare variables
 var dealerSum = 0;
 var yourSum = 0;
-
 var dealerAceCount = 0;
 var yourAceCount = 0;
-
 var hidden;
 var deck;
-
 var canHit = true;
 
+//Start up functions
 window.onload = function() {
     buildDeck();
     shuffleDeck();
     startGame();
 }
 
+//Build arrays containing the card vaules: number/suits
 function buildDeck() {
     let values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "K", "Q"];
     let suits = ["C", "D", "H", "S"];
     deck = [];
 
+//Loop through arrays
     for (let i = 0; i < suits.length; i++) {
         for (let j = 0; j < values.length; j++) {
             deck.push(values[j] + "-" + suits[i]);
         }
     }
-    //console.log(deck);
 }
 
 function shuffleDeck() {
@@ -42,10 +42,8 @@ function startGame() {
     hidden = deck.pop();
     dealerSum += getValue(hidden);
     dealerAceCount += checkAce(hidden);
-    // console.log(hidden);
-    // console.log(dealerSum);
-    while(dealerSum < 17) {
 
+    while(dealerSum < 17) {
         let cardImg = document.createElement("img");
         let card = deck.pop();
         cardImg.src = "./cards/" + card + ".png";
