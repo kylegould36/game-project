@@ -28,6 +28,7 @@ function buildDeck() {
     }
 }
 
+//Random cards
 function shuffleDeck() {
     for (let i = 0; i < deck.length; i++) {
         let j = Math.floor(Math.random() * deck.length);
@@ -67,6 +68,7 @@ function startGame() {
 
 }
 
+//Function for hit
 function hit() {
     if(!canHit) {
         return;
@@ -84,6 +86,7 @@ function hit() {
     }
 }
 
+//Function for stand
 function stand() {
     dealerSum = reduceAce(dealerSum, dealerAceCount);
     yourSum = reduceAce(yourSum, yourAceCount);
@@ -91,6 +94,7 @@ function stand() {
     canHit = false;
     document.getElementById("hidden").src="./cards/" + hidden + ".png";
 
+//Output results
     let message = "";
     if(yourSum > 21) {
         message = "Loser!";
@@ -109,6 +113,7 @@ function stand() {
     document.getElementById("results").innerText = message;
 }
 
+//Value of cards: values/suits
 function getValue(card) {
     let data = card.split("-");
     let value = data[0];
@@ -124,6 +129,7 @@ function getValue(card) {
     return parseInt(value);
 }
 
+//Is card an ace
 function checkAce(card) {
     if(card[0] == "A") {
         return 1;
@@ -132,6 +138,7 @@ function checkAce(card) {
     }
 }
 
+//Calculating ace
 function reduceAce(playerSum, playerAceCount) {
     while(playerSum > 21 && playerAceCount > 0) {
         playerSum -= 10;
@@ -139,3 +146,9 @@ function reduceAce(playerSum, playerAceCount) {
     }
     return playerSum;
 }
+
+//Restart game
+document.querySelector('#restart').addEventListener("click", function() {
+    window.location.reload();
+    return false;
+});
