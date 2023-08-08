@@ -2,7 +2,9 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     text-align: center;
-    background-color: green;
+    background-image: url(./imgs/bjback.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 #dealer-cards img {
@@ -17,13 +19,7 @@ body {
     margin: 1px;
 }
 
-#hit {
-    height: 50px;
-    width: 100px;
-    font-size: 20px;
-}
-
-#stand {
+#hit, #stand, #restart {
     height: 50px;
     width: 100px;
     font-size: 20px;
