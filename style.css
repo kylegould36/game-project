@@ -30,10 +30,20 @@ body {
 }
 
 #results {
-    font-size: 50px;
+    font-size: 30px;
 }
 
 button {
     background-color: red;
     color: white;
+}
+
+.side {
+    float: left;
+    width: 15%;
+    position: absolute;
+}
+
+.side-photos {
+    width: 200%;
 }
