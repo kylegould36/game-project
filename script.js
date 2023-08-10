@@ -73,7 +73,6 @@ function hit() {
     if(!canHit) {
         return;
     }
-
     let cardImg = document.createElement("img");
     let card = deck.pop();
     cardImg.src = "./cards/" + card + ".png";
@@ -96,17 +95,17 @@ function stand() {
 
 //Output results
     let message = "";
-    if(yourSum > 21 && dealerSum <= 21) {
-        message = "Bust! Dealer wins!";
+    if(yourSum > 21) {
+        message = "Bust!";
     } else if(yourSum == 21 && dealerSum < yourSum) {
         message = "Blackjack! You win!";
     } else if(yourSum <= 21 && dealerSum < yourSum || dealerSum > 21) {
         message = "Winner!";
-    } else if(dealerSum <= 21 && yourSum < dealerSum || yourSum > 21) {
+    } else if(dealerSum < 21 && yourSum < dealerSum || yourSum > 21) {
         message = "Loser! Dealer wins!";
     } else if(dealerSum == yourSum) {
         message = "Tie!";
-    } else if(dealerSum == 21 && yourSum < dealerSum || yourSum > 21) {
+    } else if(dealerSum == 21 && yourSum < dealerSum) {
         message = "Dealer has Blackjack! You lose!";
     }
 
@@ -127,7 +126,6 @@ function getValue(card) {
             return 10;
         }
     }
-
     return parseInt(value);
 }
 
