@@ -96,18 +96,18 @@ function stand() {
 
 //Output results
     let message = "";
-    if(yourSum > 21) {
-        message = "Loser!";
-    } else if(dealerSum > 21) {
+    if(yourSum > 21 && dealerSum <= 21) {
+        message = "Bust! Dealer wins!";
+    } else if(yourSum == 21 && dealerSum < yourSum) {
+        message = "Blackjack! You win!";
+    } else if(yourSum <= 21 && dealerSum < yourSum) {
         message = "Winner!";
-    } else if(yourSum == dealerSum) {
+    } else if(dealerSum <= 21 && yourSum > dealerSum) {
+        message = "Loser! Dealer wins!";
+    } else if(dealerSum == yourSum) {
         message = "Tie!";
-    } else if(yourSum > dealerSum) {
-        message = "Winner!";
-    } else if(yourSum < dealerSum) {
-        message = "Loser!";
-    } else if(yourSum == 21 && yourSum > dealerSum) {
-        message = "Winner! Blackjack!";
+    } else if(dealerSum == 21 && yourSum < dealerSum) {
+        message = "Dealer has Blackjack! You lose!";
     }
 
     document.getElementById("dealer-sum").innerText = dealerSum;
