@@ -100,13 +100,13 @@ function stand() {
         message = "Bust! Dealer wins!";
     } else if(yourSum == 21 && dealerSum < yourSum) {
         message = "Blackjack! You win!";
-    } else if(yourSum <= 21 && dealerSum < yourSum) {
+    } else if(yourSum <= 21 && dealerSum < yourSum || dealerSum > 21) {
         message = "Winner!";
-    } else if(dealerSum <= 21 && yourSum > dealerSum) {
+    } else if(dealerSum <= 21 && yourSum < dealerSum || yourSum > 21) {
         message = "Loser! Dealer wins!";
     } else if(dealerSum == yourSum) {
         message = "Tie!";
-    } else if(dealerSum == 21 && yourSum < dealerSum) {
+    } else if(dealerSum == 21 && yourSum < dealerSum || yourSum > 21) {
         message = "Dealer has Blackjack! You lose!";
     }
 
