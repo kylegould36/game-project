@@ -39,16 +39,17 @@ button {
 .side {
     float: left;
     width: 15%;
-    position: relative;
+    position: absolute;
 }
 
 .rside {
     float: right;
     width: 15%;
-    position: relative;
+    position: absolute;
+    margin-left: 1315px;
 }
 
 .side-photos {
-    width: fit-content;
+    width: 200%;
     padding-bottom: 5px;
 }
