@@ -99,7 +99,7 @@ function stand() {
         message = "Bust!";
     } else if(yourSum == 21 && dealerSum < yourSum) {
         message = "Blackjack! You win!";
-    } else if(yourSum <= 21 && dealerSum < yourSum || dealerSum > 21) {
+    } else if(yourSum < 21 && dealerSum < yourSum || dealerSum > 21) {
         message = "Winner!";
     } else if(dealerSum < 21 && yourSum < dealerSum || yourSum > 21) {
         message = "Loser! Dealer wins!";
