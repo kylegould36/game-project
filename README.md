@@ -7,4 +7,7 @@ Ace counts as 1 or 11<li>
 Number cards count as their number value<li>
 Whoever is closer to 21 without going over 21 wins<li>
 Getting 21 with two cards counts as Blackjack and is an automatic win<li>
-Going over 21 results in a bust<li>
+Going over 21 results in a bust
+
+<h2>How to play<h2>
+Each player will be dealt two cards to begin. Depending on the total value of the first two cards, the player can choose to either: hit or stand. Hit means that if your current card total is less than 21 and you think you can get closer to 21, hitting will have the dealer give you a card. Standing will end your turn, this is done because your cards total value is something you like. It is close to 21 or you think you can win the round with what you have. For example, if your first two cards total up to 11, you would want to hit because there is no way you can go over 21 with your next card. Your next card actually gives you a great chance to get Blackjack (getting exactly 21). Now lets say your first two cards equal to 18, your best bet would be to stand. You could get lucky and get something 3 or under. But theres a greater chance you will go over 21 and bust. The winner is determined by who can get to 21 or close to it without going over.
